@@ -2,7 +2,6 @@
   "name": "vslint",
   "version": "0.0.1",
   "description": "Hides all eslint dependencies",
-  "main": "index.js",
   "author": "Varun Dev",
   "license": "ISC",
   "bin": {
