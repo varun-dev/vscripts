@@ -1,0 +1,16 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "vslint": "vslint",
+    "init": "npm pack ../vslint && npm install --no-package-lock"
+  },
+  "author": "Varun Dev",
+  "license": "ISC",
+  "dependencies": {
+    "vslint": "file:vslint-0.0.1.tgz"
+  }
+}
