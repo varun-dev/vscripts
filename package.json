@@ -4,10 +4,15 @@
   "description": "Hides all eslint dependencies",
   "author": "Varun Dev",
   "license": "ISC",
+  "repository": "https://github.com/varun-dev/vslint.git",
   "bin": {
     "vslint": "./bin/vslint.js"
   },
+  "scripts": {
+    "eslint": "./bin/vslint.js --fix bin"
+  },
   "dependencies": {
+    "command-line-args": "^5.0.2",
     "shelljs": "^0.8.2",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
