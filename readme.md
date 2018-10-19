@@ -1,8 +1,12 @@
 ## vslint
+This project demonstrates how you can hide eslint configurations and its dependencies inside a package by exposing an npm cli. You can extend this concept to hide any configurations like build with all babel dependencies.
 
-Totally random name :)
+### Why do this?
 
-This project demonstrates how you can hide eslint configurations and dependencies inside a package by exposing an npm cli.
+- it decouples your code from configuration hell
+- helps you maintain all configs at one place instead of duplicating in all your projects
+- easy to change configurations and upgrade dependencies
+
 
 ### Example Usage
 ```
