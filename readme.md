@@ -1,5 +1,5 @@
-## vslint
-This project demonstrates how you can hide eslint configurations and its dependencies inside a package by exposing an npm cli. You can extend this concept to hide any configurations like build with all babel dependencies.
+### VScripts (work in progress)
+This project demonstrates how you can abstract your project configurations and its dependencies inside a package by exposing an npm cli.
 
 ### Why do this?
 
@@ -8,26 +8,30 @@ This project demonstrates how you can hide eslint configurations and its depende
 - easy to change configurations and upgrade dependencies
 
 
-### Example Usage
+### Usage
 ```
-$ npm istall --dev vslint
+$ npm istall --dev vscripts
 ```
 Do not try the above command, this is not published.
 
-### `package.json` script examples
+#### `package.json` script examples
 ```
+"build": "vscripts build" 
+
 // default is src
-"eslint": "vslint"
+"lint": "vscripts lint"
 
 // provide a source folder(s)
-"eslint": "vslint source"
+"lint": "vscripts lint --src source"
 ```
 
-- The cli is in `/bin/vslint.js`
-- Note the `bin` config in `/vslint/package.json`, that's what does the magic
+### Notes
+- You can see this project in action in [dynamic-redux-state](https://github.com/varun-dev/dynamic-redux-state)
+- The cli and relevant code is in `/bin`
+- The `bin` config in `package.json` exposes the cli
 
 #### External Reference:
 https://blog.npmjs.org/post/118810260230/building-a-simple-command-line-tool-with-npm
 
-#### Feedback/Issies/Questions
+#### Feedback / Issues / Questions
 - raise a ticket

@@ -4,7 +4,7 @@
   "description": "Abstracts project build configurations",
   "author": "Varun Dev",
   "license": "ISC",
-  "repository": "https://github.com/varun-dev/vslint.git",
+  "repository": "https://github.com/varun-dev/vscripts.git",
   "bin": {
     "vscripts": "./bin/vscripts.js"
   },
