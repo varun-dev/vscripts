@@ -1,23 +1,31 @@
 {
-  "name": "vslint",
-  "version": "0.0.1",
-  "description": "Hides all eslint dependencies",
+  "name": "vscripts",
+  "version": "0.0.3",
+  "description": "Abstracts project build configurations",
   "author": "Varun Dev",
   "license": "ISC",
   "repository": "https://github.com/varun-dev/vslint.git",
   "bin": {
-    "vslint": "./bin/vslint.js"
-  },
-  "scripts": {
-    "eslint": "./bin/vslint.js --fix bin"
+    "vscripts": "./bin/vscripts.js"
   },
   "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.2.3",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "^8.0.5",
     "command-line-args": "^5.0.2",
-    "shelljs": "^0.8.2",
-    "eslint": "^5.6.1",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.12.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^4.0.0-beta.5",
+    "shelljs": "^0.8.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1"
   }
 }
