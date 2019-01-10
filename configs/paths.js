@@ -24,6 +24,11 @@ const webpackCli = [
   `${modulePath}/node_modules/webpack/bin/webpack.js`
 ]
 
+const devServerCli = [
+  'node_modules/webpack-dev-server/bin/webpack-dev-server.js',
+  `${modulePath}/node_modules/webpack-dev-server/bin/webpack-dev-server.js`
+]
+
 function getValidPath(paths) {
   const validPath = paths.find(fs.existsSync)
   if (validPath) return validPath
@@ -32,12 +37,14 @@ function getValidPath(paths) {
 }
 
 module.exports = {
+  contentBase: resolvePath('docs'),
+  devServerCli: getValidPath(devServerCli),
+  entry: resolvePath('src/index.js'),
   lintCli: getValidPath(lintCli),
   lintConfig: getValidPath(lintConfig),
-  webpackCli: getValidPath(webpackCli),
-  webpackConfig: getValidPath(webpackConfig),
-  entry: resolvePath('src/index.js'),
-  contentBase: resolvePath('docs'),
+  modulePath: modulePath,
   output: resolvePath('docs'),
-  src: resolvePath('src')
+  src: resolvePath('src'),
+  webpackCli: getValidPath(webpackCli),
+  webpackConfig: getValidPath(webpackConfig)
 }

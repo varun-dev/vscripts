@@ -23,6 +23,9 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
+            plugins: [
+              require.resolve('@babel/plugin-proposal-class-properties')
+            ],
             presets: [
               require.resolve('@babel/preset-env'),
               require.resolve('@babel/preset-react')
